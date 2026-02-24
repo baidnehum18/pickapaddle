@@ -1,3 +1,13 @@
+/* SHIPPING BAR */
+.shipping-bar{
+  background:#b7ff00;
+  color:black;
+  text-align:center;
+  padding:10px 0;
+  font-weight:700;
+  letter-spacing:1px;
+  font-size:14px;
+}
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
