@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Perseus Pro Paddle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="announcement-bar">
+    Shop Now & Save Big Before It’s Gone!
+  </div>
+
+<div class="product-page">
+
+  <!-- LEFT THUMBNAILS -->
+  <div class="thumbs">
+    <img src="images/perseus1.png" onclick="changeImage(this)">
+    <img src="images/perseus2.png" onclick="changeImage(this)">
+    <img src="images/perseus3.png" onclick="changeImage(this)">
+    <img src="images/perseus4.png" onclick="changeImage(this)">
+  </div>
+
+  <!-- MAIN IMAGE -->
+  <div class="main-img">
+    <img src="images/perseus1.png" id="mainImage">
+  </div>
+
+  <!-- RIGHT INFO -->
+  <div class="product-info">
+
+    <h1>Original JOOLA Ben Johns Perseus Pro IV 16mm Pickleball Paddle</h1>
+
+    <p class="price">₹15,000.00</p>
+
+    <!-- BULLET FEATURES -->
+    <ul class="bullets">
+      <li>Series: Perseus</li>
+      <li>Class: Professional</li>
+      <li>UPA-A Certified</li>
+      <li>USA-P PBCoR .43 certified</li>
+    </ul>
+
+    <!-- QTY -->
+    <div class="qty">
+      <button onclick="dec()">-</button>
+      <span id="qty">1</span>
+      <button onclick="inc()">+</button>
+    </div>
+
+    <!-- BUY BUTTON -->
+    <a href="https://wa.me/919680196821?text=Hi%20I%20want%20Perseus%20Pro" target="_blank">
+      <button class="buy">BUY IT NOW</button>
+    </a>
+
+    <hr class="fine-line">   <!-- ⭐ ADD THIS -->
+    <p class="shipping">🚚 Free shipping pan India</p>
+
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active" onclick="showTab('desc')">DESCRIPTION</button>
+  <button class="tab" onclick="showTab('spec')">SPECIFICATION</button>
+</div>
+
+<!-- DESCRIPTION -->
+<div id="desc" class="tab-content active">
+  <p>
+  The Perseus Pro IV paddle is the ultimate blend of innovation, control, and power.
+  This next evolution of our beloved paddle shape now features patent-pending TechFlex
+  Power (TFP) technology, resulting in improved precision and more confidence with every shot.
+  </p>
+
+  <p>
+  The optimised weight distribution within the Perseus Pro IV reduces paddle fatigue
+  and provides forgiveness on mishits — giving you more room to play your individual game.
+  </p>
+</div>
+
+<!-- SPECIFICATION -->
+<!-- SPECIFICATION -->
+<div id="spec" class="tab-content">
+
+  <div class="spec-wrapper">
+
+    <!-- LEFT BOX -->
+    <div class="spec-box">
+      <div class="row"><span>Surface</span><span>Carbon Friction</span></div>
+      <div class="row"><span>Core mm</span><span>16 mm</span></div>
+      <div class="row"><span>Control</span><span>-</span></div>
+      <div class="row"><span>Power</span><span>-</span></div>
+      <div class="row"><span>Spin</span><span>-</span></div>
+      <div class="row"><span>Class</span><span>Paddles : Professional (200+)</span></div>
+    </div>
+
+    <!-- RIGHT BOX -->
+    <div class="spec-box">
+      <div class="row"><span>Average weight</span><span>229.6g</span></div>
+      <div class="row"><span>Paddle length</span><span>41.9 cm</span></div>
+      <div class="row"><span>Paddle width</span><span>19.1 cm</span></div>
+      <div class="row"><span>Grip circumference</span><span>4.125in</span></div>
+      <div class="row"><span>Grip length</span><span>5.5in</span></div>
+      <div class="row"><span>Grip type</span><span>White Feel-Tec Grip</span></div>
+    </div>
+
+  </div>
+
+  <p class="spec-note">*May vary slightly</p>
+
+</div>
+<script>
+function changeImage(el){
+document.getElementById("mainImage").src = el.src;
+}
+
+let q=1;
+function inc(){ q++; document.getElementById("qty").innerText=q }
+function dec(){ if(q>1) q--; document.getElementById("qty").innerText=q }
+
+function showTab(tab){
+document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+document.querySelectorAll(".tab-content").forEach(c=>c.classList.remove("active"));
+
+if(tab==='desc'){
+document.querySelectorAll(".tab")[0].classList.add("active");
+document.getElementById("desc").classList.add("active");
+}else{
+document.querySelectorAll(".tab")[1].classList.add("active");
+document.getElementById("spec").classList.add("active");
+}
+}
+</script>
+
+</body>
+</html>

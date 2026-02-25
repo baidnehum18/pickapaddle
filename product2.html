@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Agassi Pro Paddle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announcement-bar">
+Shop Now & Save Big Before It’s Gone!
+</div>
+
+<!-- PRODUCT GRID -->
+<div class="product-page">
+
+  <!-- THUMBNAILS -->
+  <div class="thumbs">
+    <img src="images/agassi1.png" onclick="changeImage(this)">
+    <img src="images/agassi2.png" onclick="changeImage(this)">
+    <img src="images/agassi3.png" onclick="changeImage(this)">
+    <img src="images/agassi4.png" onclick="changeImage(this)">
+  </div>
+
+  <!-- MAIN IMAGE -->
+  <div class="main-img">
+    <img src="images/agassi1.png" id="mainImage">
+  </div>
+
+  <!-- RIGHT INFO -->
+  <div class="product-info">
+
+    <h1>CLONE JOOLA Agassi Pro 16mm Pickleball Paddle</h1>
+    <p class="price">₹4,500.00</p>
+
+    <!-- BULLETS -->
+    <ul class="bullets">
+      <li><b>Series:</b> Agassi</li>
+      <li><b>Class:</b> Professional</li>
+    </ul>
+
+    <!-- QTY -->
+    <div class="qty">
+      <button onclick="dec()">-</button>
+      <span id="qty">1</span>
+      <button onclick="inc()">+</button>
+    </div>
+
+    <!-- BUY -->
+    <a href="https://wa.me/919680196821?text=Hi%20I%20want%20Agassi%20Pro" target="_blank">
+      <button class="buy">BUY IT NOW</button>
+    </a>
+
+    <hr class="fine-line">
+
+    <p class="shipping">🚚 Free shipping pan India</p>
+
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active" onclick="showTab(event,'description')">DESCRIPTION</button>
+  <button class="tab" onclick="showTab(event,'specification')">SPECIFICATION</button>
+</div>
+
+<!-- DESCRIPTION -->
+<div id="description" class="tab-content active">
+  <p>
+  Together, Agassi’s vision and JOOLA’s innovation deliver the premiere paddle in the Agassi series.
+  Built for high performance, Agassi Pro features an extended sweet spot for precision shot placement
+  and consistent power. JOOLA’s Tech Flex Power (TFP) technology offers optimal weight distribution
+  for enhanced control and forgiveness.
+  </p>
+</div>
+
+<!-- SPECIFICATION -->
+<div id="specification" class="tab-content">
+
+  <div class="spec-wrapper">
+
+    <div class="spec-box">
+      <div class="row"><span>Surface</span><span>Textured Carbon Fiber</span></div>
+      <div class="row"><span>Core mm</span><span>16 mm</span></div>
+      <div class="row"><span>Control</span><span>—</span></div>
+      <div class="row"><span>Power</span><span>—</span></div>
+      <div class="row"><span>Spin</span><span>—</span></div>
+      <div class="row"><span>Class</span><span>Paddles : Professional (200+)</span></div>
+    </div>
+
+    <div class="spec-box">
+      <div class="row"><span>Average weight</span><span>229.6 g</span></div>
+      <div class="row"><span>Paddle length</span><span>41.9 cm</span></div>
+      <div class="row"><span>Paddle width</span><span>19.05 cm</span></div>
+      <div class="row"><span>Grip circumference</span><span>4.25 in</span></div>
+      <div class="row"><span>Grip length</span><span>5.5 in</span></div>
+      <div class="row"><span>Grip type</span><span>Red Feel-Tec Grip</span></div>
+    </div>
+
+  </div>
+
+  <p class="spec-note">*May vary slightly</p>
+</div>
+
+<script>
+function changeImage(el){
+document.getElementById("mainImage").src = el.src;
+}
+
+let q=1;
+function inc(){ q++; document.getElementById("qty").innerText=q }
+function dec(){ if(q>1) q--; document.getElementById("qty").innerText=q }
+
+function showTab(e,tab){
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+document.getElementById(tab).classList.add('active');
+e.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
